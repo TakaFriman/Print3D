@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{461BF955-5FFC-4137-A1E4-387FE3F65FDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Print3D</RootNamespace>
+    <AssemblyName>Print3D</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.13.0\lib\net40\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCamera.Designer.cs">
+      <DependentUpon>FormCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormColor.Designer.cs">
+      <DependentUpon>FormColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetection.Designer.cs">
+      <DependentUpon>FormDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormError.Designer.cs">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIconButtonError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIconButtonError.Designer.cs">
+      <DependentUpon>FormIconButtonError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIconButtonHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIconButtonHelp.Designer.cs">
+      <DependentUpon>FormIconButtonHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIconButtonRnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIconButtonRnd.Designer.cs">
+      <DependentUpon>FormIconButtonRnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrint3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrint3D.Designer.cs">
+      <DependentUpon>FormPrint3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCamera.resx">
+      <DependentUpon>FormCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormColor.resx">
+      <DependentUpon>FormColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetection.resx">
+      <DependentUpon>FormDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormError.resx">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIconButtonError.resx">
+      <DependentUpon>FormIconButtonError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIconButtonHelp.resx">
+      <DependentUpon>FormIconButtonHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIconButtonRnd.resx">
+      <DependentUpon>FormIconButtonRnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrint3D.resx">
+      <DependentUpon>FormPrint3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Downloads\Module.AForge\Module.AForge\Module.AForge.csproj">
+      <Project>{D11D8633-4D96-4571-921A-E272283FEE38}</Project>
+      <Name>Module.AForge</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
